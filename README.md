@@ -1,6 +1,12 @@
 # redux-device-type
 A reducer to keep track of your current device size
 
+## install
+
+```
+npm install --save redux-device-type
+```
+
 ## usage
 
 first add the `deviceTypeReducer` to your reducer list
@@ -14,7 +20,7 @@ const reducers = combineReducers({
 });
 ```
 
-next you need to initialize the lib by passing your redux store
+next you need to initialize the redux-device-type by passing your redux store into the `initReduxDeviceType` method
 
 ```javascript
 import { initReduxDeviceType } from 'redux-device-type';
