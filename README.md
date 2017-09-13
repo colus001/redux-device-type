@@ -7,6 +7,10 @@ A reducer to keep track of your current device size in order to react to the cha
 npm install --save redux-device-type
 ```
 
+## demo
+
+https://codesandbox.io/s/l2pn2k19v9
+
 ## usage
 
 first add the `deviceTypeReducer` to your reducer list
@@ -30,7 +34,7 @@ const store = createStore(reducers);
 initReduxDeviceType(store);
 ```
 
-now you can access the device type via the deviceType key from the store. This way you can build logic for rendering certain components according to the width of the device.
+now you can access the device type via the deviceType key from the store. This way you can build logic for rendering certain components according to the width of the device. You may check the device type against the constants exported by the library.
 
 ```javascript
 import { EXTRA_SMALL, SMALL, MEDIUM, LARGE } from 'redux-device-type';
