@@ -29,14 +29,13 @@ now you can access the device type via the deviceType key from the store. This w
 ```javascript
 import { EXTRA_SMALL, SMALL, MEDIUM, LARGE } from 'redux-device-type';
 
-const App = ({ deviceType }) => (
-  <div style={styles}>
+const App = ({ deviceType }) =>
+  <div>
     { deviceType <= SMALL && <div>SMALL AND LESS </div> }
-    { deviceType < EXTRA_SMALL && <div>SMALLER THAN EXTRA_SMALL</div>}
-    { deviceType === MEDIUM && <div>MEDIUM</div>}
-    { deviceType >= LARGE && <div>AT LEAST LARGE</div>}
-  </div>
-);
+    { deviceType < EXTRA_SMALL && <div>SMALLER THAN EXTRA_SMALL</div> }
+    { deviceType === MEDIUM && <div>MEDIUM</div> }
+    { deviceType >= LARGE && <div>AT LEAST LARGE</div> }
+  </div>;
 
 const AppWithDeviceType = connect(
   ({ deviceType }) => ({ deviceType }),
