@@ -1,5 +1,5 @@
 # redux-device-type
-A reducer to keep track of your current device size
+A reducer to keep track of your current device size in order to react to the chages (e.g. rendering certain components only on some device sizes).
 
 ## install
 
