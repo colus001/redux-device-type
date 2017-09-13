@@ -1,6 +1,6 @@
 {
   "name": "redux-device-type",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a reducer to keep track of your current device size",
   "main": "index.js",
   "scripts": {

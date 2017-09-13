@@ -52,3 +52,29 @@ const ComponentWithDeviceType = connect(
   null
 )(Component);
 ```
+
+## advanced usage
+
+the default sizes are
+
+| CONSTANT        | VALUE           | MINIMUM WIDTH  |
+| ------------- |:-------------:| -----:|
+| IPHONE_RETINA      | 0 | 0px |
+| EXTRA_SMALL      | 1      |   480px |
+| SMALL | 2     |    768px |
+| MEDIUM | 3    |    992px |
+| LARGE | 4    |    1200px |
+
+you can also pass an object to the `initReduxDeviceType` method as a second parameter, in order to redefine all or some of the sizing boundaries
+
+```javascript
+
+const customWidths = {
+  large: 1000,
+  medium: 850,
+  small: 600,
+  extraSmall: 300
+};
+
+initReduxDeviceType(store, customWidths);
+```
