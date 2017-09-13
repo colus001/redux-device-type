@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { Provider, connect } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
 
-import { deviceTypeReducer, initReduxDeviceType, EXTRA_SMALL, SMALL, MEDIUM, LARGE } from '../../index.js';
+import { deviceTypeReducer, initReduxDeviceType, EXTRA_SMALL, SMALL, MEDIUM, LARGE } from 'redux-device-type';
 
 
 const reducers = combineReducers({
@@ -23,6 +23,7 @@ const styles = {
 
 const App = ({ deviceType }) => (
   <div style={styles}>
+    <h2>resize the window</h2>
     { deviceType <= SMALL && <div>SMALL AND LESS </div> }
     { deviceType < EXTRA_SMALL && <div>SMALLER THAN EXTRA_SMALL</div>}
     { deviceType === MEDIUM && <div>MEDIUM</div>}

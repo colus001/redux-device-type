@@ -3,10 +3,11 @@
   "description": "demo of redux-device-type",
   "version": "0.0.1",
   "dependencies": {
-    "redux": "3.7.2",
-    "react-redux": "5.0.6",
+    "react": "15.5.3",
     "react-dom": "15.5.3",
-    "react": "15.5.3"
+    "react-redux": "5.0.6",
+    "redux": "3.7.2",
+    "redux-device-type": "^1.0.1"
   },
   "devDependencies": {
     "react-scripts": "1.0.0"
@@ -16,5 +17,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "license": "ISC"
 }
