@@ -1,7 +1,7 @@
 {
-  "name": "redux-device-type",
-  "description": "",
-  "version": "0.0.0",
+  "name": "redux-device-type-demo",
+  "description": "demo of redux-device-type",
+  "version": "0.0.1",
   "dependencies": {
     "redux": "3.7.2",
     "react-redux": "5.0.6",
