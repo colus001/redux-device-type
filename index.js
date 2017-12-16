@@ -8,7 +8,8 @@ export const SMALL = 2;
 export const MEDIUM = 3;
 export const LARGE = 4;
 
-export function initReduxDeviceType(store, customWidths = {}) {
+export function initReduxDeviceType({ dispatch }, customWidths = {}) {
+  let lastDeviceType = null
 
   const setDeviceType = () => {
     let deviceType = IPHONE_RETINA;
@@ -17,8 +18,9 @@ export function initReduxDeviceType(store, customWidths = {}) {
     else if (window.innerWidth >= (customWidths.small || 768)) deviceType = SMALL;
     else if (window.innerWidth >= (customWidths.extraSmall || 480)) deviceType = EXTRA_SMALL;
 
-    if (store.getState() === deviceType) return;
-    store.dispatch({ type: SET_DEVICE_TYPE, deviceType });
+    if (lastDeviceType === deviceType) return
+    lastDeviceType = deviceType
+    dispatch({ type: SET_DEVICE_TYPE, deviceType });
   };
 
   setDeviceType(); //initial value
