@@ -1,4 +1,4 @@
-const debounce = require('lodash/fp/debounce');
+const throttle = require('lodash/fp/throttle');
 
 const SET_DEVICE_TYPE = 'SET_DEVICE_TYPE';
 
@@ -21,7 +21,7 @@ export function initReduxDeviceType({ dispatch }, customWidths = {}) {
   };
 
   setDeviceType(); //initial value
-  window.onresize = debounce(setDeviceType, 100);
+  window.onresize = throttle(setDeviceType, 100);
 }
 
 export const deviceTypeReducer = (state = null, action) => {
