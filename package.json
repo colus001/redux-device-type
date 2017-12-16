@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/matthiasklan/redux-device-type/issues"
   },
-  "homepage": "https://github.com/matthiasklan/redux-device-type#readme"
+  "homepage": "https://github.com/matthiasklan/redux-device-type#readme",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
 }

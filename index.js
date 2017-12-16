@@ -1,3 +1,5 @@
+const debounce = require('lodash/fp/debounce');
+
 const SET_DEVICE_TYPE = 'SET_DEVICE_TYPE';
 
 export const IPHONE_RETINA = 0;
@@ -19,7 +21,7 @@ export function initReduxDeviceType({ dispatch }, customWidths = {}) {
   };
 
   setDeviceType(); //initial value
-  window.onresize = setDeviceType;
+  window.onresize = debounce(setDeviceType, 100);
 }
 
 export const deviceTypeReducer = (state = null, action) => {
