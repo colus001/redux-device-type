@@ -21,7 +21,7 @@ export function initReduxDeviceType({ dispatch }, customWidths = {}) {
   };
 
   setDeviceType(); //initial value
-  window.onresize = throttle(setDeviceType, 100);
+  window.onresize = throttle(100)(setDeviceType);
 }
 
 export const deviceTypeReducer = (state = null, action) => {
